@@ -18,6 +18,7 @@
                                     <td>ID</td>
                                     <td>Name</td>
                                     <td>Description</td>
+                                    <td>Image</td>
                                     <td>Is Active</td>
                                     <td>Action</td>
                                 </tr>
@@ -28,6 +29,9 @@
                                     <td>{{ $item->id}}</td>
                                     <td>{{ $item->name}}</td>
                                     <td>{{ $item->description}}</td>
+                                    <td>
+                                        <img src="{{ asset($item->image) }}" class="rounded" style="width:70px; height:70px;" alt="Img" />
+                                    </td>
                                     <td>
                                         @if ($item->is_active)
                                             Active

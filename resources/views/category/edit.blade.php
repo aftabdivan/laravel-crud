@@ -17,7 +17,7 @@
                         </h4>
                     </div>
                     <div class="card-body">
-                        <form action="{{url('categories/'.$category->id.'/edit')}}" method="POST">
+                        <form action="{{url('categories/'.$category->id.'/edit')}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <div class="mb-3">
@@ -35,6 +35,10 @@
                             <div class="mb-3">
                                 <label>Is Active</label>
                                 <input type="checkbox" name='is_active' {{ $category->is_active == true ? 'checked' : '' }}>
+                            </div>
+                            <div class="mb-3">
+                                <label>Upload File/Image</label>
+                                <input type="file" name="image" class="form-control" />
                             </div>
                             <div class="mb-3">
                                 <button type="submit" class="btn btn-primary">Update</button>
