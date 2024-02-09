@@ -7,10 +7,9 @@
     <div class="py-5">
         <div class="container">
             @php
-                $successMessage = "Saved Successfully"
+                $successMessage = "Welcome To Home Page"
             @endphp
             <x-alert-message :message="$successMessage"/>
-            <h4> Welcome To Index Page</h4>
         </div>
     </div>
 </x-app-web-layout>
