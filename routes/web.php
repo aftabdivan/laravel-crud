@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,13 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('customer', [CustomerController::class, 'index']);
+Route::get('customer/create', [CustomerController::class, 'create']);
+Route::post('customer/create', [CustomerController::class, 'store']);
+Route::get('customer/{id}/edit', [CustomerController::class, 'edit']);
+Route::put('customer/{id}/edit', [CustomerController::class, 'update']);
+Route::get('customer/{id}/delete', [CustomerController::class, 'destroy']);
 
 Route::get('categories', [CategoryController::class, 'index']);
 Route::get('categories/create', [CategoryController::class, 'create']);

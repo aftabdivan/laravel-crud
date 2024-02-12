@@ -1,7 +1,7 @@
 <x-app-web-layout>
 
     <x-slot name="title">
-        Laravel App
+        Blog App
     </x-slot>
 
     <div class="py-5">
